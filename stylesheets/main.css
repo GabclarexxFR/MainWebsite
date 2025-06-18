@@ -149,9 +149,9 @@ p {
   }
 
   .right-column img {
-    width: 100%;
+    width: auto;
     height: auto;
-    max-height: 75vh;
+    max-height: 50vh;
   }
 }
 
@@ -232,8 +232,7 @@ p {
 
 .photo4 img {
   position: absolute;
-  width: 100%;       /* Fill container width */
-  height: auto;      /* Keep aspect ratio */
+  width: 100%;       /* Fill container width */     /* Keep aspect ratio */
   object-fit: cover;
   object-position: center;
   max-height: 100%;  /* Remove max-height restriction */
@@ -260,6 +259,44 @@ p {
   color: #FFF;
   cursor: pointer;
   margin-bottom: 1rem;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  padding: 1rem;
+}
+
+/* Mobile version: 5-column grid */
+@media screen and (max-width: 768px) {
+  .bento-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  /* Re-assign photos to fit new layout manually */
+  .photo1 {
+    grid-column: span 2;
+    aspect-ratio: 2 / 3;
+  }
+
+  .photo2 {
+    grid-column: span 3;
+  }
+
+  .photo3 {
+    grid-column: span 5;
+    aspect-ratio: 5 / 3;
+  }
+
+  .photo4 {
+    grid-column: span 3;
+  }
+
+  .photo5 {
+    grid-column: span 2;
+    aspect-ratio: 2 / 3;
+  }
 }
 
 /* ----------- SECTION MUSIQUE ----------- */
