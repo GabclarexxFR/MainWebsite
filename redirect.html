@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gclar.fr - Welcome</title>
+    <script>
+        (function() {
+            var lang = navigator.language || navigator.userLanguage || '';
+            if (lang.toLowerCase().startsWith('fr')) {
+                window.location.replace('/fr/home.html');
+            } else {
+                window.location.replace('/en/home.html');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <p>Redirecting to your language...</p>
+</body>
+</html>

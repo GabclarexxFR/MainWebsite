@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+Allow: /redirect.html
+# Indicate that redirect.html should be indexed as a normal page
+Noindex: 
