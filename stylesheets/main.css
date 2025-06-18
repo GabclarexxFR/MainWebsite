@@ -151,6 +151,7 @@ p {
   .right-column img {
     width: 100%;
     height: auto;
+    max-height: 75vh;
   }
 }
 
@@ -227,21 +228,16 @@ p {
   background-color: #e0e0e0;
   position: relative;
   overflow: hidden;
-  height: 100%; /* Make sure it fills its grid row height */
-  min-height: 300px; /* or some fixed minimum to avoid collapse */
 }
 
 .photo4 img {
   position: absolute;
-  top: 50%;
-  left: 50%;
   width: 100%;       /* Fill container width */
   height: auto;      /* Keep aspect ratio */
-  transform: translate(-50%, -50%);
   object-fit: cover;
   object-position: center;
-  max-height: none;  /* Remove max-height restriction */
-  max-width: none;   /* Remove max-width restriction */
+  max-height: 100%;  /* Remove max-height restriction */
+  max-width: 100%;   /* Remove max-width restriction */
 }
 
 /* ⚫️ */
