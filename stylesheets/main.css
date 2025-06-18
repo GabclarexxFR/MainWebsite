@@ -23,6 +23,10 @@ body {
   padding-right: 20px;
 }
 
+p {
+  color:#FFFFFF;
+}
+
 /* ----------- HERO SECTION ----------- */
 
 .hero {
@@ -95,7 +99,7 @@ body {
   }
 }
 
-/* ----------- SECTION TITLE FORMAT ----------- */
+/* ----------- SECTION TITLE ----------- */
 
 .section-title{
   text-align: center;
@@ -103,6 +107,8 @@ body {
   color: #FFFFFF;
   font-size: 2rem;
 }
+
+/* ----------- SECTION PHOTOGRAPHIE INTRO ----------- */
 
 .photo-intro-content {
   display: flex;
@@ -147,12 +153,6 @@ body {
     height: auto;
   }
 }
-
-p {
-  color:#FFFFFF;
-}
-
-/* ----------- SECTION PHOTOGRAPHIE INTRO----------- */
 
 .photography{
   background-size: cover;
@@ -225,8 +225,24 @@ p {
   grid-column: span 6;
   grid-row: span 1;
   background-color: #e0e0e0;
+  position: relative;
+  overflow: hidden;
+  height: 100%; /* Make sure it fills its grid row height */
+  min-height: 300px; /* or some fixed minimum to avoid collapse */
 }
 
+.photo4 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;       /* Fill container width */
+  height: auto;      /* Keep aspect ratio */
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center;
+  max-height: none;  /* Remove max-height restriction */
+  max-width: none;   /* Remove max-width restriction */
+}
 /* ⚫️ */
 .photo5 {
   grid-column: span 2;
@@ -250,6 +266,8 @@ p {
 }
 
 /* ----------- SECTION MUSIQUE ----------- */
+
+
 
 
 
